@@ -1,0 +1,23 @@
+MODEL_2D:
+  TYPE: "UNetResNet34"
+  NUM_CLASSES: 12
+MODEL_3D:
+  TYPE: "SCN"
+  NUM_CLASSES: 12
+
+DATASET_TARGET:
+  TYPE: "SemanticKITTISCN"
+  TEST: ("test",)
+  SemanticKITTISCN:
+    source: "GTA"
+    preprocess_dir: ""
+    #root directory of the pickle files generated with SemanticKITTI dataset
+    semantic_kitti_dir: ""
+    #root directory of the SemanticKITTI dataset
+DATALOADER:
+  NUM_WORKERS: 4
+VAL:
+  BATCH_SIZE: 8
+CHECKPOINT2D_DIR: ""
+CHECKPOINT3D_DIR: ""
+OUTPUT_DIR: ""
